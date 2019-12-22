@@ -1,46 +1,62 @@
-import React from 'react';
-import AddItem from '../AddItem/AddItem';
-import List from '../List/List';
-import Filter from '../Filter/Filter';
+import React, { Component } from 'react';
+
+import Header from '../Header';
+import Filter from '../Filter';
+import List from '../List';
+import AddItem from '../AddItem';
 
 import './App.css';
 
-const dataArr = [
-    {
+export default class App extends Component {
+  state = {
+    todoData: [
+      {
         id: 1,
-        title: 'Todo list 1',
-        isDone: true,
-        important: false
-    },
-    {
+        title: 'Սովորել React',
+       
+      },
+      {
         id: 2,
-        title: 'Todo list 2',
-        isDone: false,
-        important: true
-    },
-    {
+        title: 'Կոֆե խմել',
+        
+      },
+      {
         id: 3,
-        title: 'Todo list 3',
-        isDone: false,
-        important: false
-    },
-    {
+        title: 'Սովորել Node.js',
+       
+      },
+      {
         id: 4,
-        title: 'Todo list 4',
-        isDone: true,
-        important: true
-    },
-]
+        title: 'Հաց ուտել',
+        
+      }
+    ]
+  };
 
-const App = () => {
+  onDeleteItem = (id) => {
+    const { todoData } = this.state;
+    const idx = todoData.findIndex((obj) => obj.id === id);
+
+    //----------
+    todoData.splice(idx,1);
+    this.setState({todoData})
+    
+    //----------tnain
+  }
+
+  render() {
     return (
-        <div className='box'>
-            <h1 className='h1'>ToDo List</h1>
-            <Filter />
-            <List listData={dataArr} />
-            <AddItem />
-        </div>
-    )
+      <div className="container">
+        <Header />
+        <Filter />
+        <List todoList={this.state.todoData}
+        onDeleteItem={this.onDeleteItem}
+        />
+        <AddItem />
+      </div>
+    );
+  }
 }
 
-export default App;
+
+

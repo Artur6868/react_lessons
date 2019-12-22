@@ -1,1 +1,1 @@
-# react_lessons
+# react_course_c

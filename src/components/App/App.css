@@ -1,9 +1,5 @@
-.box{
-    background-image: url(mut.jpg);
-    height: 700px;
-}
-.h1{
-    margin: 20px 0 20px 510px;
-    color: rgb(220, 230, 220);
-    font-size: 50px;
+.container {
+  max-width: 800px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
