@@ -1,0 +1,22 @@
+.the-end{
+    color: #999;
+    margin: 15px 0 30px;
+    font-size: 13px;
+    line-height: 120%;
+    margin-top: 70px;
+  }
+
+  .Footer{
+    padding-top: 310px;
+    color: #84a2bc;
+    font-size: 13px;
+    line-height: 16px
+  }
+
+  .linke{
+    color: #3a6d99;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration:  underline
+  }

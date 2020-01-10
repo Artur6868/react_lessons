@@ -1,16 +1,18 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import './Header.css';
 
-const Header = () => {
-  return (
-    <>
-      <h1>Todo List</h1>
-      <div className="stats">
-        1 more todo, 3 done
-      </div>
-    </>
-  );
-};
-
-export default Header;
+export default class Header extends Component{
+    render(){
+        return(
+            <div className='header'>
+                <div className='div d-flex'>
+                  <i className='icon-tg-logo'></i>
+                  <p className='p'>
+                     <a className='link' href='https://telegram.org/'>Telegram</a>
+                     <a className='linkOne' href='/'>Next ></a>
+                  </p>
+               </div>
+        </div>
+        )
+    }
+}
